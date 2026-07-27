@@ -104,7 +104,7 @@ class TinyEditor extends Field implements Contracts\CanBeLengthConstrained
 
             foreach ($images as $image) {
                 $src = $image->getAttribute('src');
-                $fileKey = $image->getAttribute('data-id');
+                $fileKey = $image->getAttribute('data-id'); // Use data-id for fileKey
                 $filename = urldecode(basename(parse_url($src, PHP_URL_PATH)));
 
                 if (!$src || !$fileKey || !$filename) {
